@@ -1,1 +1,1 @@
-# DEMS-InterPolit-cnicos
+# DEMS-InterPolitecnicos
