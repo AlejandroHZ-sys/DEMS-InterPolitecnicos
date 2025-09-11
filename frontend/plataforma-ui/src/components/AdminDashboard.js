@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AdminDashboard.css';// Importa los íconos de la librería
+import { Link } from 'react-router-dom'; // Importa el componente Link
 import { FiHome, FiUsers, FiSettings, FiDownload, FiCalendar, FiUser, FiCalendar as FiCalendarAlt, FiCheckCircle, FiPlusCircle, FiList, FiEdit2, FiMenu } from 'react-icons/fi';
 import { FaGraduationCap, FaBuilding  } from 'react-icons/fa';
 
@@ -27,8 +28,8 @@ const AdminDashboard = () => {
                 </div>
                 <nav className="main-nav">
                     <ul>
-                        <li><a href="#dashboard" className="active"><FiHome className="icon" />Dashboard</a></li>
-                        <li><a href="#usuarios"><FiUsers className="icon" />Gestión de Usuarios</a></li>
+                        <li><Link to="/" className="active"><FiHome className="icon" />Dashboard</Link></li>
+                        <li><Link to="/users"><FiUsers className="icon" />Gestión de Usuarios</Link></li>
                         <li><a href="#encuentros"><FiCalendar className="icon" />Configutación de encuentros</a></li>
                         <li><a href="#configuracion"><FiSettings className="icon" />Configuración</a></li>
                         <li><a href="#descargas"><FiDownload className="icon" />Módulo de Descargas</a></li>

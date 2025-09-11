@@ -1,0 +1,90 @@
+/* src/components/UserManagement.css */
+
+.user-management-container {
+  padding: 30px;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.user-management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-management-header h1 {
+  font-size: 2rem;
+  color: #2d3748;
+}
+
+.create-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  outline: none;
+}
+
+.table-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.user-table th {
+  background-color: #f7fafc;
+  color: #4a5568;
+  font-weight: bold;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f0f4f8;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: #4a5568;
+  cursor: pointer;
+  margin-right: 5px;
+}
