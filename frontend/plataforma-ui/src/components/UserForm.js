@@ -29,7 +29,7 @@ const UserForm = () => {
             <label htmlFor="role">Rol/Perfil</label>
             <select id="role" name="role" onChange={handleRoleChange} value={selectedRole}>
               <option value="">Seleccionar rol</option>
-              {/* Opción de Supervisor solo para Administrador, por ahora se muestra */}
+              <option value="administrador">Administrador</option>
               <option value="supervisor">Supervisor</option>
               <option value="coordinador">Coordinador</option>
               <option value="asesor">Asesor</option>
@@ -37,14 +37,17 @@ const UserForm = () => {
             </select>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="center">Unidad Académica</label>
-            <select id="center" name="center">
-              <option value="">Seleccionar centro</option>
-              <option value="escom">ESCOM</option>
-              <option value="cecyt1">CECyT 1</option>
-            </select>
-          </div>
+          {/* === Campo de Centro: Solo se muestra para roles con centro === */}
+          {(selectedRole === 'coordinador' || selectedRole === 'asesor' || selectedRole === 'participante') && (
+            <div className="form-group">
+              <label htmlFor="center">Unidad Académica</label>
+              <select id="center" name="center">
+                <option value="">Seleccionar centro</option>
+                <option value="escom">ESCOM</option>
+                <option value="cecyt1">CECyT 1</option>
+              </select>
+            </div>
+          )}
 
           {/* Campo de Credencial para todos los roles que lo requieren */}
           {(selectedRole === 'coordinador' || selectedRole === 'asesor' || selectedRole === 'participante') && (
